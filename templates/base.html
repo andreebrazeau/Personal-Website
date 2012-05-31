@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Andree Brazeau</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Andree Brazeau" />
+	<meta name="revised" content="2012/05/24" />
+	<link rel="stylesheet" href="/media/static/css/bootstrap.css" />
+	<link rel="stylesheet" href="/media/static/css/bootstrap-responsive.css" />
+	<link rel="stylesheet" href="/media/static/css/docs.css" />
+</head>	
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+	<!-- Navigation bar -->
+	<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="./index.html">Learn Django</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="{{ aboutMeClass }}">
+                <a href="/home">Home</a>
+              </li>
+			  <li class="{{ contactClass }}">
+                <a href="/contact">Contact</a>
+              </li>
+			  <li class="">
+                <a href="/media/static/documents/resume.pdf">Resume</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+ 	
+	<div class = "container">
+		<div id='content'>
+			{% block content %} {% endblock %}		
+		</div> <!-- end content-->
+	</div><!--end container-->
+	<footer class = "container">
+		<p> &copy; andreebrazeau 2011. <br/>Website design by Andree Brazeau. </p>
+	</footer> <!--end footer-->
+	
+	<!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="/media/static/js/jquery.js"></script>
+    <script src="/media/static/js/google-code-prettify/prettify.js"></script>
+    <script src="/media/static/js/bootstrap-transition.js"></script>
+    <script src="/media/static/js/bootstrap-alert.js"></script>
+    <script src="/media/static/js/bootstrap-modal.js"></script>
+    <script src="/media/static/js/bootstrap-dropdown.js"></script>
+    <script src="/media/static/js/bootstrap-scrollspy.js"></script>
+    <script src="/media/static/js/bootstrap-tab.js"></script>
+    <script src="/media/static/js/bootstrap-tooltip.js"></script>
+    <script src="/media/static/js/bootstrap-popover.js"></script>
+    <script src="/media/static/js/bootstrap-button.js"></script>
+    <script src="/media/static/js/bootstrap-collapse.js"></script>
+    <script src="/media/static/js/bootstrap-carousel.js"></script>
+    <script src="/media/static/js/bootstrap-typeahead.js"></script>
+    <script src="/media/static/js/application.js"></script>
+
+</body>
+</html>
