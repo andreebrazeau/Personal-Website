@@ -14,10 +14,10 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    url(r'^blog/$','blog.views.index'),
+    url(r'^blog/$','blog.views.blog_list'),
     url(r'^blog/(?P<blog_id>\d+)/$', 'blog.views.blog'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^home/','blog.views.home'),
+    url(r'^index/','blog.views.index'),
     url(r'^contact/','blog.views.contact'),
 
 )

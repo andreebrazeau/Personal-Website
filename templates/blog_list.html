@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<header class="jumbotron subhead" id="overview">		
+		<h1>Andree's blog</h1>
+		<p class = "lead">Project done with PyLadiesSF</p>
+	</header>
+	<h1>This is the list of all the blog post</h1>
+	{% if latest_blog_post %}	
+		{% for blog in latest_blog_post %}
+			<h3>
+				<a href="/blog/{{blog.id}}/">{{ blog.title }}</a> 
+				<small>{{blog.created}}</small>
+			</h3>
+			<div class="span12">
+				<p>{{ blog.body }}</p>
+				<p><strong><a href="/blog/{{blog.id}}/">{{ blog.comment_set.all|length }} Comments</strong> </a></p>
+			</div>		
+		{% endfor %}		
+	{% else %}
+		<h1>No post available</h1>
+	{% endif %}
+{% endblock %}

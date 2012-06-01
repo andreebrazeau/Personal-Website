@@ -38,6 +38,5 @@ class Comment (models.Model):
     def __unicode__(self):
         #Returned a 'label' for the class, Comment, that
         #is easily understandable for humans to read.
-        return unicode("%s: %s" % (self.post, self.body[:60]))
-        
+        return unicode("%s: %s" % (self.post, self.body[:60]))        
 
