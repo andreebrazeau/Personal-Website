@@ -1,6 +1,6 @@
 # Django settings for myblog project.
 import dj_database_url
-
+ 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
