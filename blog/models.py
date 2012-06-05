@@ -30,7 +30,7 @@ class BlogPost(models.Model):
         
 class Comment (models.Model):
     
-    crated = models.DateTimeField(auto_now_add=True)
+    created = models.DateTimeField(auto_now_add=True)
     author = models.CharField ('Name',max_length = 256)
     body = models.TextField('Comment')
     post = models.ForeignKey(BlogPost)

@@ -2,7 +2,7 @@ from blog.models import BlogPost, Comment
 from django.contrib import admin
 
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ["post", "author", "crated"]
+    list_display = ["post", "author", "created"]
 
 class BlogPostAdmin(admin.ModelAdmin):
     def preview(self, obj):
