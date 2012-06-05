@@ -17,7 +17,7 @@ urlpatterns = patterns('',
     url(r'^blog/$','blog.views.blog_list'),
     url(r'^blog/(?P<blog_id>\d+)/$', 'blog.views.blog'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^index/','blog.views.index'),
+    url(r'^$','blog.views.index', name = 'index'),
     url(r'^contact/','blog.views.contact'),
 
 )
