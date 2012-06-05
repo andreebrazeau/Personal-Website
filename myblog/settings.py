@@ -11,6 +11,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+BROKER_BACKEND = 'django'
 
 DATABASES = {
     'default': {
@@ -130,6 +131,9 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'blog',
+    'kombu.transport.django',
+	'djcelery', 
+	'gunicorn',
 )
 
 # A sample logging configuration. The only tangible logging
