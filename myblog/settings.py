@@ -2,7 +2,7 @@
 #import dj_database_url
 import psycopg2
  
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
