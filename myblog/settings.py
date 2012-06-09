@@ -3,10 +3,10 @@
 import psycopg2
  
 DEBUG = False
-TEMPLATE_DEBUG = DEBUG
+TEMPLATE_DEBUG = False
 
 ADMINS = (
-    # ('Andree', 'andreebrazeau@gmail.com'),
+    #('Andree', 'andreebrazeau@gmail.com'),
 )
 
 MANAGERS = ADMINS
