@@ -13,6 +13,8 @@ MANAGERS = ADMINS
 
 BROKER_BACKEND = 'django'
 
+SENTRY_DSN = 'SENTRY_DSN'
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
@@ -145,6 +147,7 @@ INSTALLED_APPS = (
     'kombu.transport.django',
 	#'djcelery', 
 	'gunicorn',
+	'raven.contrib.django',
 )
 
 # A sample logging configuration. The only tangible logging
