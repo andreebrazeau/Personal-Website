@@ -85,7 +85,7 @@ div.opacity
     color:#08C;
 }
 #about{
-    width:840px;
+  
 }
 div.scroll{
     margin-top:5px;
@@ -120,4 +120,7 @@ padding:0;
 .btn[disabled] {
   background-color: #56616f;
   *background-color: #56616f;
+}
+#about {
+    width:1210px;
 }
