@@ -30,7 +30,5 @@ def blog(request, blog_id):
         return HttpResponseRedirect(reverse('blog.views.blog', args= (p.id,)))
         
 def index(request):
-    return render_to_response('aboutMe.html',{ 'aboutMeClass' : 'active' })
+    return render_to_response('index.html')
 
-def contact(request):
-    return render_to_response('contact.html', { 'contactClass' : 'active' })

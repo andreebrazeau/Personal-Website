@@ -1,54 +1,227 @@
 {% extends "base.html" %}
 
 {% block content %}
-		<div class="container">
 		
 		<!-- ================================ Masterhead ================================ -->
-		<header class="jumbotron subhead" id ="overview">
-			<h1>Andrée  Brazeau</h1>
-			<p class = "lead">Project Manager, junior web developer.</p>
-		</header>
-		
-<section id = "global">			
-	<div class="container-fluid">
-		<div class= "row-fluid">
-			<div class="span8">
-				{% block about %} {% endblock %}
-				{% block contact %} {% endblock %}
-			</div> <!--end span-->
-			<div class="span4 hero-unit">
-				<h2 class="blue">Links</h2>
-				<a href="http://www.linkedin.com/in/andreebrazeau/en" target="blank" class="roll_hover">
-					<div class="roll_hover" id = "linkedin"> </div> 
-				</a> 
-				<a href="https://www.facebook.com/ddbraz" target="blank"class="roll_hover" > 
-					<div class="roll_hover" id = "facebook"> </div>
-				</a>
-				<a href="http://twitter.com/#!/ddbraz" target="blank"class="roll_hover"> 
-					<div class="roll_hover" id = "twitter"> </div>
-				</a>
-				<a href="https://github.com/andreebrazeau" target="blank"class="roll_hover"> 
-					<div class="roll_hover" id = "github"> </div>
-				</a>
-				<h2>Lastest Tweets</h2>
-				<div id="twitter_update_list">
-					<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js">
-					</script>
-					<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/ddbraz.json?callback=twitterCallback2&count=3">
-					</script>
-				</div>
-				<h2 class="red">Projects</h2>
-               	<li class="unstyled">
-					<a id="mastermind" href='#' >Mastermind game</a>
-				</li>
-				<li class="{{ blogClass }}">
-	                <a href="/blog">Blog</a>
-	            </li>
-			</div><!-- end span -->
-		</div> <!--row-fluid-->
-	</div> <!--container-fluid-->
+		<div class="container">
+            <header class="jumbotron subhead" id ="overview">
+                <h1>Andrée  Brazeau</h1>
+                <p class = "lead">Project Manager. Junior web developer.</p>
+            </header>
+	    </div> <!--end div container-->
+	    <div class="instagram"></div>
+<section id = "global">	
+    <div class="container-headers">
+        <div class="container">
+            <h2>About</h2>
+        </div>
+    </div>
+    <div class="container" id="about">
+        <div class="row-fluid">
+            <div class="span8  opacity" style="height:300px">
+                <p>
+                I am a project manager and a mechanical engineer alumni of <a href="http://www2.ulaval.ca/" target="_blank">Laval University</a>. Recently moved to San Francisco and currently looking for new challenges. Although my background is in project management and mechanical engineering. I have worked for <a href="http://legroupeid.com/en/" target="_blank"> ID Group</a>, a software company, and would love to do so again. <br/><br/>I managed the deployment and integration of software in different industries such as mining, manufacturing and pharmaceutical. I have worked closely with the engineering team on the last release of the software by developing training manual on the new features and trained all the staff. I have knowledge of the difference software life cycle, PMI and Agile methodologies. I am self studying programming to improve my knowledge.<br/><br/>
+                If you think I have the skill to be part of your team, feel free to contact me for more information.  
+                </p>
+            </div> <!--end span-->
+            <div class="span4 opacity" style="height:300px">
+                <h3>Lastest Tweets</h3>
+                <div id="twitter_update_list" class="scroll">
+                    <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js">
+                    </script>
+                    <script type="text/javascript" src="http://twitter.com/statuses/user_timeline/ddbraz.json?callback=twitterCallback2&count=5">
+                    </script>
+                </div>
+            </div>
+        </div><!--end row-fluid-->
+    </div> <!--end container-->
+    
+    <div class="container-headers">
+        <div class="container">
+            <h2>Experiences</h2>
+        </div>
+    </div>
+    <div class="container opacity">
+        <div class="row-fluid">
+            <div class="span3">
+                <a href="http://www.legroupeid.com/" target="blank">
+                    <img src="/media/static/images/logo-groupeID.png" class="centered" />
+                </a>
+                <h4>Project manager</h4>
+                <p><em>07-2008 to 07-2011</em></p>
+                <ul>
+                    <li>Project management</li>
+                    <li>Software deployment</li>
+                    <li>Leader in projects</li>
+                    <li>Business analysis</li>
+                    <li>Training</li>
+                    <li>Consulting</li>
+                    <li>Technical support</li>
+                </ul>
+            </div><!-- end span-->
+            <div class="span3">
+                <a href="http://www.ideapme.ca/idea/" target="blank" class="centered">
+                    <img src="/media/static/images/logo_IDEA.png" class="centered" />
+                </a>
+                <h4>Product manager assistant</h4>
+                <p><em>Summer of 2007</em></p>
+                <ul>
+                    <li>Product development</li>
+                    <li>High technology</li>
+                    <li>Patent research</li>
+                    <li>Material research</li>
+                    <li>3D modelling</li>
+                </ul>
+            </div><!-- end span-->
+            <div class="span3">
+                <a href="http://www.ulaval.ca/" target="blank">
+                    <img src="/media/static/images/logo-UL.png" class="centered" />
+                </a>
+                <h4>Teacher assistant</h4>
+                <p><em>2006 - 2007</em></p>
+                <ul>
+                    <li>Intro to MatLab and Maple class</li>
+                    <li>Intro to Pro-E and AutoCAD class</li>
+                </ul>
+            </div><!-- end span-->
+            <div class="span3">
+                <a href="http://www.ulaval.ca/" target="blank">
+                    <img src="/media/static/images/logo-yours.png" class="centered" />
+                </a>
+                <h4>Your company name here</h4>
+                <p><em>present</em></p>
+                <ul>
+                    <li>Awesome job</li>
+                    <li>Acquire new skills</li>
+                </ul>
+            </div><!-- end span-->
+        </div><!-- end row-->
+    </div> <!--end div container-->
+    <div class="container-headers">
+        <div class="container">
+            <h2>Skills</h2>
+        </div>
+    </div>
+    <div class="container opacity" id="skills">
+        <div class="row-fluid">
+            <div class="span3">
+                <h4>MANAGEMENT</h4>
+                <table >
+                    <tr>
+                        <td>★★★★★ </th>
+                        <td>Waterfall</th>
+                    </tr>
+                    <tr>
+                        <td>★★★★★ </td>
+                        <td>Agile</td>
+                    </tr>
+                </table>
+            </div> <!-- end span-->
+            <div class="span3">
+                <h4>PROGRAMMING</h4>
+                <table >
+                    <tr>
+                        <td>★★★★ </th>
+                        <td>HTML, CSS, JS</th>
+                    </tr>
+                    <tr>
+                        <td>★★★★ </td>
+                        <td>Python</td>
+                    </tr>
+                    <tr>
+                        <td>★★★ </td>
+                        <td>Django</td>
+                    </tr>
+                    <tr>
+                        <td>★★★ </td>
+                        <td>VB.net, C, Matlab</td>
+                    </tr>
+                </table>
+            </div> <!-- end span-->
+            <div class="span3">
+                <h4>Offices Tools</h4>
+                <table >
+                    <tr>
+                        <td>★★★★★ </th>
+                        <td>MS Project</th>
+                    </tr>
+                    <tr>
+                        <td>★★★★★ </td>
+                        <td>MS Word</td>
+                    </tr>
+                    <tr>
+                        <td>★★★★★ </td>
+                        <td>MS Excel</td>
+                    </tr>
+                    <tr>
+                        <td>★★★★ </td>
+                        <td>Photoshop</td>
+                    </tr>
+                </table>
+            </div> <!-- end span-->
+            <div class="span3">
+                <h4>CAD tools</h4>
+                <table >
+                    <tr>
+                        <td>★★★★★ </th>
+                        <td>PRo-Engineer</th>
+                    </tr>
+                    <tr>
+                        <td>★★★★ </td>
+                        <td>AutoCAD</td>
+                    </tr>
+                    <tr>
+                        <td>★★★★ </td>
+                        <td>Solidwork</td>
+                    </tr>
+                </table>
+            </div> <!-- end span-->
+        </div><!-- end row-->
+    </div> <!--end div container-->
+
+    <div class="container-headers">
+        <div class="container">
+            <h2>Contacts</h2>
+        </div>
+    </div>
+
+    <div class="container opacity">
+        <div class="row-fluid">
+            <div class="span2">
+                <a href="http://www.linkedin.com/in/andreebrazeau/en" target="blank" class="roll_hover">
+                    <div class="roll_hover" id = "linkedin"> </div> 
+                </a>
+            </div> <!-- end span-->
+            <div class="span2">
+                <a href="https://www.facebook.com/ddbraz" target="blank"class="roll_hover" > 
+                    <div class="roll_hover" id = "facebook"> </div>
+                </a>
+            </div> <!-- end span-->
+            <div class="span2">
+                <a href="http://twitter.com/#!/ddbraz" target="blank"class="roll_hover"> 
+                    <div class="roll_hover" id = "twitter"> </div>
+                </a>
+            </div> <!-- end span-->
+            <div class="span2">
+                <a href="https://github.com/andreebrazeau" target="blank"class="roll_hover"> 
+                    <div class="roll_hover" id = "github"> </div>
+                </a>
+            </div> <!-- end span-->
+            <div class="span2">
+                <a href="mailto:andreebrazeau@gmail.com" target="blank" class="roll_hover">
+                    <div class="roll_hover" id = "email"> </div> 
+                </a>
+            </div> <!-- end span-->
+            <div class="span2">
+                <a href="http://http://www.gramfeed.com/ddbraz" target="blank" class="roll_hover">
+                    <div class="roll_hover" id = "gramfeed"> </div> 
+                </a>
+            </div> <!-- end span-->
+        </div><!-- end row-fluid-->
+        
+    </div> <!--end div container-->
 </section>	
 
 
-		</div><!--end container-->
+
 {% endblock %}

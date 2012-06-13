@@ -12,8 +12,8 @@ body {
   position: relative;
   padding-top: 90px;
   background-color: #fff;
-  background-image: url(../images/grid.png);
-  background-repeat: repeat-x;
+  background-image: url(../images/grid1.png);
+  background-repeat: repeat;
   background-position: 0 40px;
 }
 

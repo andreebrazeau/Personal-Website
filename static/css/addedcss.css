@@ -1,4 +1,4 @@
-#twitter:hover, #facebook:hover, #linkedin:hover, #github:hover
+#twitter:hover, #facebook:hover, #linkedin:hover, #github:hover, #email:hover, #gramfeed:hover
 {
     background-position : 0 -50px;
 }
@@ -19,7 +19,14 @@
 {
     background: url("/media/static/images/github-icon.png") repeat scroll 0 0 transparent;
 }
-
+#email
+{
+    background: url("/media/static/images/email-icon.png") repeat scroll 0 0 transparent;
+}
+#gramfeed
+{
+    background: url("/media/static/images/Instagram-icon.png") repeat scroll 0 0 transparent;
+}
 div.roll_hover
 {
     border: 0 none;
@@ -28,9 +35,89 @@ div.roll_hover
     text-indent: -9999px;
     width: 50px;
     display:inline-block;
+    display:block;
+    margin-left: auto;
+    margin-right: auto; 
 }
 
 a:hover
 {
     text-decoration: none;
+}
+#container-all-content
+{
+    margin-right:0px;
+    margin-left:0px;
+    width:100%;
+}
+.container-headers
+{
+    background:url("/media/static/images/ribbon1.png") no-repeat;
+    height:50px;
+    margin-top:10px;
+    margin-bottom:10px;
+    padding-top:5px
+}
+.container-headers h2 
+{
+    color:#EEEEEE;
+    font-size:30px;
+}
+div.opacity 
+{
+    background:#dfeffe;
+    padding:20px;
+    border-radius:10px;
+}
+.centered
+{
+    display:block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+#skills h4 {
+    text-align:center;
+}
+#skills table {
+    width:186px;
+}
+#skills tr>td:first-of-type  {
+    color:#08C;
+}
+#about{
+    width:840px;
+}
+div.scroll{
+    margin-top:5px;
+    height:225px;
+    overflow:scroll;
+    
+}
+footer {
+    margin-top:20px;
+}
+.navbar-inner {
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#8c94a0), to(#56616f));    
+    
+}
+.navbar .nav > li > a  {
+    color:#EEEEEE;
+}
+.navbar .nav .active>a, .navbar .nav .active >a:hover{
+    background-color: #7c8591;
+}
+.container-fluid {
+padding:0;
+}
+.btn {
+    background-image:-webkit-linear-gradient(top, #a1a9b3, #56616f);
+    color: lightgray;
+}
+.btn:hover,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+  background-color: #56616f;
+  *background-color: #56616f;
 }
