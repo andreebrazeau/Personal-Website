@@ -13,7 +13,7 @@ MANAGERS = ADMINS
 
 BROKER_BACKEND = 'django'
 
-SENTRY_DSN = 'SENTRY_DSN'
+#SENTRY_DSN = 'SENTRY_DSN'
 
 DATABASES = {
     'default': {
