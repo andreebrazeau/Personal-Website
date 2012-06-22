@@ -1,5 +1,7 @@
 from blog.models import BlogPost, Comment
 from django.contrib import admin
+from django.contrib.sites.models import Site
+from django.contrib.auth.models import *
 
 class CommentAdmin(admin.ModelAdmin):
     list_display = ["post", "author", "created"]
