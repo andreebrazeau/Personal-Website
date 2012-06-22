@@ -12,3 +12,6 @@ class BlogPostAdmin(admin.ModelAdmin):
 
 admin.site.register(Comment, CommentAdmin)
 admin.site.register(BlogPost, BlogPostAdmin)
+admin.site.unregister(User)
+admin.site.unregister(Group)
+admin.site.unregister(Site)
