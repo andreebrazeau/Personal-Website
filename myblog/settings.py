@@ -1,7 +1,7 @@
 # Django settings for myblog project.
 #import dj_database_url
 import psycopg2
- 
+
 DEBUG = True
 TEMPLATE_DEBUG = True 
 
@@ -148,6 +148,7 @@ INSTALLED_APPS = (
 	#'djcelery', 
 	'gunicorn',
 	'raven.contrib.django',
+	'south',
 )
 
 # A sample logging configuration. The only tangible logging
