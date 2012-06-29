@@ -1,36 +1,36 @@
 #twitter:hover, #facebook:hover, #linkedin:hover, #github:hover, #email:hover, #gramfeed:hover
 {
-    background-position : 0 -50px;
+    background-position : 0 -50px; 
 }
 
 #twitter
 {
-    background: url("/media/static/images/twitter-icon.png") repeat scroll 0 0 transparent;
+    background: url("/media/static/images/twitter-icon.png");
 }
 #facebook
 {
-    background: url("/media/static/images/facebook-icon.png") repeat scroll 0 0 transparent;
+    background: url("/media/static/images/facebook-icon.png");
 }
 #linkedin
 {
-    background: url("/media/static/images/linkedin-icon.png") repeat scroll 0 0 transparent;
+    background: url("/media/static/images/linkedin-icon.png");
 }
 #github
 {
-    background: url("/media/static/images/github-icon.png") repeat scroll 0 0 transparent;
+    background: url("/media/static/images/github-icon.png");
 }
 #email
 {
-    background: url("/media/static/images/email-icon.png") repeat scroll 0 0 transparent;
+    background: url("/media/static/images/email-icon.png");
 }
 #gramfeed
 {
-    background: url("/media/static/images/Instagram-icon.png") repeat scroll 0 0 transparent;
+    background: url("/media/static/images/Instagram-icon.png");
 }
 div.roll_hover
 {
     border: 0 none;
-    background-size: 100%, 100%;
+    background-size: 100%;
     height: 50px;
     text-indent: -9999px;
     width: 50px;
