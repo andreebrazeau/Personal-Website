@@ -7,7 +7,7 @@
                 <small>{{blog.created}}</small>
             </h3>
             <div>
-                <p>{{ blog.body }}</p>
+                <p>{{ blog.body|safe }}</p>
                 <p><strong><a href="/blog/{{blog.id}}/">{{ blog.comment_set.all|length }} Comments</strong> </a></p>
             </div>		
         {% endfor %}		
