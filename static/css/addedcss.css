@@ -69,6 +69,7 @@ div.opacity
     background:#DFEFFE;
     padding:20px;
     border-radius:10px;
+    position:relative;
 }
 .centered
 {
@@ -124,4 +125,10 @@ padding:0;
 }
 body {
     padding-top: 80px;
+}
+#medal {
+    position:absolute;
+    top: 10px;
+    right:10px;
+    height:70px;
 }

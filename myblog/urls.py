@@ -18,6 +18,7 @@ urlpatterns = patterns('',
     url(r'^blog/(?P<blog_id>\d+)/$', 'blog.views.blog'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$','blog.views.index', name = 'index'),
+    url(r'^project/$','blog.views.project', name = 'index'),
 
 )
 

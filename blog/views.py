@@ -32,3 +32,5 @@ def blog(request, blog_id):
 def index(request):
     return render_to_response('index.html')
 
+def project(request):
+    return render_to_response('project.html')
