@@ -3,7 +3,7 @@
 import psycopg2
 
 DEBUG = False 
-TEMPLATE_DEBUG = True 
+TEMPLATE_DEBUG = False 
 
 ADMINS = (
     #('Andree', 'andreebrazeau@gmail.com'),
