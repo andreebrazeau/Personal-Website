@@ -129,10 +129,20 @@ body {
 #medal {
     position:absolute;
     top: 10px;
-    right:10px;
+    right:9px;
     height:70px;
 }
+
 .project_desc {
+    display:none;
     margin-top:15px;
 }
 
+.container_project {
+    width:900px;
+    margin-bottom:10px;
+}
+
+.preview {
+    cursor:pointer;
+}
