@@ -6,6 +6,7 @@ class BlogPost(models.Model):
     author = models.CharField (max_length = 256)
     body = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
+    
     def next_post(self):
         nextEntries = BlogPost.objects.filter(id__gt=self.id)
         if (len(nextEntries)>0):
@@ -20,8 +21,8 @@ class BlogPost(models.Model):
         else:
             return None
     
-    def bodySample (self):
-        return self.body[:100]
+    def get_bodySample (self):
+        self.bodySample = self.body[:300]
         
     def __unicode__(self):
         #Returned a 'label' for the class, BlogPost, that

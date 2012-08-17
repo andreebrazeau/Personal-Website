@@ -2,8 +2,8 @@
 #import dj_database_url
 import psycopg2
 
-DEBUG = False 
-TEMPLATE_DEBUG = False 
+DEBUG = False
+TEMPLATE_DEBUG = DEBUG 
 
 ADMINS = (
     #('Andree', 'andreebrazeau@gmail.com'),

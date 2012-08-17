@@ -6,6 +6,8 @@ from django.core.urlresolvers import reverse
 
 def blog_list(request):
     latest_blog_post = BlogPost.objects.all().order_by('-created')[:10]
+    [blog.get_bodySample() for blog in latest_blog_post]
+    print 'latest_blog_post', latest_blog_post
     return render_to_response('blog_list.html',{
         'latest_blog_post' : latest_blog_post,
         'blogClass' : 'active',
