@@ -1,9 +1,9 @@
-#twitter:hover, #facebook:hover, #linkedin:hover, #github:hover, #email:hover, #gramfeed:hover
+#twitter-img:hover, #facebook:hover, #linkedin:hover, #github:hover, #email:hover, #gramfeed:hover
 {
     background-position : 0 -50px; 
 }
 
-#twitter
+#twitter-img
 {
     background: url("/media/static/images/twitter-icon.png");
 }
@@ -146,3 +146,19 @@ body {
 .preview {
     cursor:pointer;
 }
+
+#twitter_update_list {
+padding: 0;
+overflow: hidden;
+color: #31353d;
+line-height: 16px;
+margin:0px;
+}
+#twitter_update_list li {
+list-style: none;
+padding-top:10px;
+padding-bottom: 10px;
+border-bottom: dotted 1px #ccc;
+
+}
+
