@@ -11,7 +11,7 @@ def blog_list(request):
     return render_to_response('blog_list.html',{
         'latest_blog_post' : latest_blog_post,
         'blogClass' : 'active',
-        })
+        },context_instance=RequestContext(request))
 
 def blog(request, blog_id):
     p = get_object_or_404(BlogPost, pk=blog_id) 
@@ -29,10 +29,13 @@ def blog(request, blog_id):
             body = comment, 
             post = BlogPost.objects.get(id=blog_id))
         c.save()
-        return HttpResponseRedirect(reverse('blog.views.blog', args= (p.id,)))
+        return HttpResponseRedirect(reverse('blog.views.blog', args= (p.id,))
+            ,context_instance=RequestContext(request))
         
 def index(request):
-    return render_to_response('index.html')
+    return render_to_response('index.html',
+        context_instance=RequestContext(request))
 
 def portfolio(request):
-    return render_to_response('portfolio.html')
+    return render_to_response('portfolio.html',
+        context_instance=RequestContext(request))
