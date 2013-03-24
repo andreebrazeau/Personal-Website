@@ -35,7 +35,7 @@ DATABASES = {
     }
 }
 
-if env == "PROD":
+if ENV == "PROD":
     DATABASES['default']['NAME'] = "/home/pi/Projects/Personal-Website/blog.db" 
 
 #DATABASES = {'default': dj_database_url.config(default='postgres://localhost')} 
