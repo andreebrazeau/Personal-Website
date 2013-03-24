@@ -1,8 +1,17 @@
 # Django settings for myblog project.
 #import dj_database_url
-import psycopg2
+import os.path 
 
-DEBUG = False
+try:
+    with open('/etc/server_env', 'r') as f:
+        ENV = f.readline().strip()
+except IOError:
+    ENV = 'DEV'
+
+if ENV=='PROD':
+    DEBUG = False
+else : 
+    DEBUG = True
 TEMPLATE_DEBUG = DEBUG 
 
 ADMINS = (
@@ -17,14 +26,15 @@ BROKER_BACKEND = 'django'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'myblog',          # Or path to database file if using sqlite3.
-        'USER': 'andreebrazeau',                      # Not used with sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': '/Users/abrazeau/Personal/Personal-Website/blog.db',
+        'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
+        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
+
 #DATABASES = {'default': dj_database_url.config(default='postgres://localhost')} 
 
 # Local time zone for this installation. Choices can be found here:
@@ -70,8 +80,8 @@ STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = '/static/'
-
+STATIC_URL = {"DEV": "/static/",  "PROD": "/static/"}[ENV]
+   
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
@@ -123,8 +133,6 @@ ROOT_URLCONF = 'myblog.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'myblog.wsgi.application'
 
-import os.path 
-
 TEMPLATE_DIRS = (
     os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\','/'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -144,10 +152,10 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'blog',
-    'kombu.transport.django',
+    # 'kombu.transport.django',
 	#'djcelery', 
 	'gunicorn',
-	'raven.contrib.django',
+	# 'raven.contrib.django',
 	'south',
 )
 
