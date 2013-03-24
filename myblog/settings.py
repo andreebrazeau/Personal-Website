@@ -35,6 +35,9 @@ DATABASES = {
     }
 }
 
+if env == "PROD":
+    DATABASES['default']['NAME'] = "/home/pi/Projects/Personal-Website/blog.db" 
+
 #DATABASES = {'default': dj_database_url.config(default='postgres://localhost')} 
 
 # Local time zone for this installation. Choices can be found here:
