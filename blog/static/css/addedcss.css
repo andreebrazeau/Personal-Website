@@ -5,27 +5,27 @@
 
 #twitter-img
 {
-    background: url("/media/static/images/twitter-icon.png");
+    background: url("../images/twitter-icon.png");
 }
 #facebook
 {
-    background: url("/media/static/images/facebook-icon.png");
+    background: url("../images/facebook-icon.png");
 }
 #linkedin
 {
-    background: url("/media/static/images/linkedin-icon.png");
+    background: url("../images/linkedin-icon.png");
 }
 #github
 {
-    background: url("/media/static/images/github-icon.png");
+    background: url("../images/github-icon.png");
 }
 #email
 {
-    background: url("/media/static/images/email-icon.png");
+    background: url("../images/email-icon.png");
 }
 #gramfeed
 {
-    background: url("/media/static/images/Instagram-icon.png");
+    background: url("../images/Instagram-icon.png");
 }
 div.roll_hover
 {
@@ -52,7 +52,7 @@ a:hover
 }
 .container-headers
 {
-    background:url("/media/static/images/ribbon1.png") no-repeat;
+    background:url("../images/ribbon1.png") no-repeat;
     height:50px;
     margin-top:10px;
     margin-bottom:10px;
