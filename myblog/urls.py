@@ -35,3 +35,6 @@ if settings.DEBUG is False:   #if DEBUG is True it will be served automatically
         'django.views.static.serve', 
         {'document_root':settings.STATIC_ROOT}),
     )   
+
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+urlpatterns += staticfiles_urlpatterns()

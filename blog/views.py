@@ -4,6 +4,7 @@ from django.http import HttpResponse,  HttpResponseRedirect
 from django.template import RequestContext
 from django.core.urlresolvers import reverse
 
+
 def blog_list(request):
     latest_blog_post = BlogPost.objects.all().order_by('-created')[:10]
     [blog.get_bodySample() for blog in latest_blog_post]
@@ -29,12 +30,12 @@ def blog(request, blog_id):
             body = comment, 
             post = BlogPost.objects.get(id=blog_id))
         c.save()
-        return HttpResponseRedirect(reverse('blog.views.blog', args= (p.id,))
+        return HttpResponseRedirect(reverse('blog.views.blog', args=(p.id,))
             ,context_instance=RequestContext(request))
-        
+
+
 def index(request):
-    return render_to_response('index.html',
-        context_instance=RequestContext(request))
+    return render_to_response('index.html', context_instance=RequestContext(request))
 
 def portfolio(request):
     return render_to_response('portfolio.html',

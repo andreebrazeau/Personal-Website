@@ -1,8 +1,18 @@
 # Django settings for myblog project.
 #import dj_database_url
 import psycopg2
+import os.path
 
-DEBUG = False
+try:
+    with open('/etc/server_env', 'r') as f:
+        ENV = f.readline().strip()
+except IOError:
+    ENV = 'DEV'
+
+if ENV == 'PROD':
+    DEBUG = False
+else:
+    DEBUG = True
 TEMPLATE_DEBUG = DEBUG 
 
 ADMINS = (
@@ -15,16 +25,28 @@ BROKER_BACKEND = 'django'
 
 #SENTRY_DSN = 'SENTRY_DSN'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'myblog',          # Or path to database file if using sqlite3.
-        'USER': 'andreebrazeau',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+if ENV != 'DEV':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+            'NAME': 'myblog',          # Or path to database file if using sqlite3.
+            'USER': 'andreebrazeau',                      # Not used with sqlite3.
+            'PASSWORD': '',                  # Not used with sqlite3.
+            'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
+            'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+            'NAME': '/Users/abrazeau/Personal/Personal-Website/blog.db',          # Or path to database file if using sqlite3.
+            'USER': '',                      # Not used with sqlite3.
+            'PASSWORD': '',                  # Not used with sqlite3.
+            'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+            'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        }
+    }
 #DATABASES = {'default': dj_database_url.config(default='postgres://localhost')} 
 
 # Local time zone for this installation. Choices can be found here:
@@ -70,7 +92,7 @@ STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = '/static/'
+STATIC_URL = {"DEV": "/static/",  "PROD": "/static/"}[ENV]
 
 # Additional locations of static files
 STATICFILES_DIRS = (

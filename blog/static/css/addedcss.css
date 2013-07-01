@@ -103,7 +103,6 @@ footer {
 padding:0;
 }
 .btn {
-    background-image:-webkit-linear-gradient(top, #a1a9b3, #56616f);
     color: lightgray;
 }
 .btn:hover,
