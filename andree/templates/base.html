@@ -6,10 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Andree Brazeau" />
 	<meta name="revised" content="2012/05/24" />
-	<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css" />
-	<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap-theme.css" />
-  <link rel="stylesheet" href="{{ STATIC_URL }}css/sticky-footer.css" />
-	<link rel="stylesheet" href="{{ STATIC_URL }}css/andree.css" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/sticky-footer.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/andree.css') }}" />
   <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
     <script type="text/javascript">
         var _gaq = _gaq || [];
@@ -31,7 +30,7 @@
 </head>	
 <body>
  	<div id="wrap">
-	  <div class = "container {% block page-class %} {% endblock %}" id="container-all-content">
+	  <div class = "container {% block page_class %} {% endblock %}" id="container-all-content">
       <div class="row">
         <div class="col-md-4">
           <div><img id="my-pic" src="{{ STATIC_URL }}images/me.jpg"></div>

@@ -1,6 +1,5 @@
 # Django settings for myblog project.
 #import dj_database_url
-import psycopg2
 import os.path
 
 try:
@@ -10,7 +9,7 @@ except IOError:
     ENV = 'DEV'
 
 if ENV == 'PROD':
-    DEBUG = False
+    DEBUG = True
 else:
     DEBUG = True
 TEMPLATE_DEBUG = DEBUG 
@@ -28,7 +27,7 @@ BROKER_BACKEND = 'django'
 if ENV != 'DEV':
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+            'ENGINE': None, # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
             'NAME': 'myblog',          # Or path to database file if using sqlite3.
             'USER': 'andreebrazeau',                      # Not used with sqlite3.
             'PASSWORD': '',                  # Not used with sqlite3.
@@ -39,7 +38,7 @@ if ENV != 'DEV':
 else:
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+            'ENGINE': None, # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
             'NAME': '/Users/abrazeau/Personal/Personal-Website/blog.db',          # Or path to database file if using sqlite3.
             'USER': '',                      # Not used with sqlite3.
             'PASSWORD': '',                  # Not used with sqlite3.
@@ -166,11 +165,9 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'blog',
-    'kombu.transport.django',
-	#'djcelery', 
+	#'djcelery',
 	'gunicorn',
 	'raven.contrib.django',
-	'south',
 )
 
 # A sample logging configuration. The only tangible logging

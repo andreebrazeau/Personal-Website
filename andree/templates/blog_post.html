@@ -1,0 +1,55 @@
+{% extends "blog_base.html" %}
+{% block blog %}
+    
+    <h1>{{ blog.title }}</h1>
+    <h3>{{blog.author}}<small>  {{blog.created}}</small></h3>
+    <p>{{ blog.body|safe }}</p>
+
+{#    <div >#}
+{#        <h2>Comments</h2>#}
+{##}
+{#        {% for comment in blog.comment_set.all %}#}
+{#            <div class="row-fluid">#}
+{#                <div class="opacity span10">#}
+{#                <h4>{{comment.author}}  <small>{{comment.created}}</small></h4>#}
+{#                <p>{{comment.body}}</p>#}
+{#                </div>#}
+{#            </div>#}
+{#            #}
+{#            <p></P>#}
+{##}
+{#        {% endfor %}#}
+{#    </div>#}
+{##}
+{#    <form action="/blog/{{ blog.id }}/" method="post" class="form-horizontal">#}
+{#    {% csrf_token %}#}
+{#        <fieldset>#}
+{#            <div class="control-group">#}
+{#                <label class="control-label" for="name">Name:</label>#}
+{#                <div class = "controls">#}
+{#                    <input type="text" class = "input-xlarge" id = "name" name = "name">#}
+{#                </div><!-- end controls-->#}
+{#            </div><!-- end control-group-->#}
+{#            <div class="control-group">#}
+{#                <label class="control-label" for = "comment">Comment:</label>#}
+{#                <div class = "controls">#}
+{#                    <textarea class = "input-xlarge" id = "comment" rows = "3" name = "comment"></textarea>#}
+{#                </div><!-- end control-->#}
+{#            </div><!-- end control-group-->#}
+{#            <div class="form-action controls">#}
+{#                <button type="submit" class="btn btn-primery">Submit comment</button>#}
+{#            </div><!-- end form-action-->#}
+{#        </fildset>#}
+{#    </form>#}
+
+    <div class="btn-group">
+    {% if blog.previous_post != None %}
+        <a class="btn btn-inverse" href="/blog/{{ blog.previous_post }}/">Previous</a>
+    {% endif %}	
+    
+    {% if blog.next_post != None %}
+        <a class="btn btn-inverse" href="/blog/{{ blog.next_post }}/">next</a>
+    {% endif %}	
+    </div>
+    <a class="btn btn-inverse" href="/blog/">Blog home</a>
+{% endblock %}

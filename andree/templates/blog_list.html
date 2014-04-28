@@ -1,0 +1,17 @@
+{% extends "blog_base.html" %}
+{% block blog %}
+    {% if latest_blog_post %}	
+        {% for blog in latest_blog_post %}
+            <h3>
+                <a href="/blog/{{blog.id}}/">{{ blog.title }}</a> 
+                <small>{{blog.created}}</small>
+            </h3>
+            <div>
+                <p>{{ blog.bodySample|safe }} <a href="/blog/{{blog.id}}/">...(more)</a> </p>
+                <p><strong><a href="/blog/{{blog.id}}/">{{ blog.comment_set.all|length }} Comments</strong> </a></p>
+            </div>		
+        {% endfor %}		
+    {% else %}
+        <h1>No post available</h1>
+    {% endif %}
+{% endblock %}

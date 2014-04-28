@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+
+{% block page-class %}home{% endblock %}
+{% block content %}
+    <h1 class="page-title">About</h1>
+    <div class="container" id="about">
+        <div class="row-fluid">
+            <div class="span8  opacity" id='about_box'>
+                <p>
+                I am formerly a project manager and trained as a mechanical engineer. About a year ago I started learning programming. I took a class at Hackbright Academy during the summer of 2012. After that 10 weeks program I found a software position at Avos. </p>
+                <p>I am currently a software engineer working at Bitcasa. I am a full stack engineer working on the Bitcasa web application and the rest api.</p>
+                <p>At the beginning of July 2012, I participated to my first hackathon at LinkedIn DevelopHer Hack Day. With our MuniMobile application completed in 24h, we grabbed the second place!</p>
+                <p>I am energetic, passionate, organized and I love to learn new things! This is why I developed this website, while working on a lot of new projects.</p>
+                <p>I am an active member of the software community of San Francisco Bay Area. I love to meet new friends, so there is a good chance you will see me in a meetup about programming, Agile or just for networking.</p>
+                <P>If you think I have the skills and attitude to be part of your team, feel free to contact me for more information.</P>
+            </div> <!--end span-->
+            <div class="span4 opacity" id= "tweet_box" >
+
+                <div id="twitter">
+                    <div id="twitter_m">
+                        <div id="twitter_container">
+                            <a class="twitter-timeline" height="300" href="https://twitter.com/ddbraz" data-widget-id="269907844084670466">Tweets by @ddbraz</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--end row-fluid-->
+    </div> <!--end container-->
+
+    <div class="container-headers">
+        <div class="container">
+            <h2>Experiences</h2>
+        </div>
+    </div>
+    <div class="container opacity">
+        <div class="row-fluid">
+            <div class="span3">
+                <a href="http://bitcasa.com/" target="blank">
+                    <div class="div_image">
+                    <img src="{{ STATIC_URL }}images/Bitcasa-Logo-Green.png" class="centered comp_logo" />
+                    </div>
+                </a>
+                <h4>Web Developer</h4>
+                <p><em>01-2013 Present</em></p>
+                <ul>
+                    <li>Buid new features in the web application.</li>
+                    <li>Maintain the rest API used by mobile apps.</li>
+                    <li>Manage the marketing site bitcasa.com</li>
+
+                </ul>
+            </div><!-- end span-->
+            <div class="span3">
+                <a href="http://avos.com/" target="blank">
+                    <div class="div_image">
+                    <img src="{{ STATIC_URL }}images/logo-AVOS.png" class="centered comp_logo" />
+                    </div>
+                </a>
+                <h4>Web Developer</h4>
+                <p><em>10-2012 to 12-2012</em></p>
+                <ul>
+                    <li>Revamped the integration of social networks to make it more robust and reliable. </li>
+                    <li>Implemented recommended users based on common interests and social connections.</li>
+                    <li>Migrated functionalities from the Python backend to the new Java backend.</li>
+                    <li>Migrated a service to a larger AWS instance to improve is performance.</li>
+                </ul>
+            </div><!-- end span-->
+            <div class="span3">
+                <a href="http://www.legroupeid.com/" target="blank">
+                    <img src="{{ STATIC_URL }}images/logo-groupeID.png" class="centered" />
+                </a>
+                <h4>Project manager</h4>
+                <p><em>07-2008 to 07-2011</em></p>
+                <ul>
+                    <li>Project management</li>
+                    <li>Software deployment</li>
+                    <li>Leader in projects</li>
+                    <li>Business analysis</li>
+                    <li>Training</li>
+                    <li>Consulting</li>
+                    <li>Technical support</li>
+                </ul>
+            </div><!-- end span-->
+            <div class="span3">
+                <a href="http://www.ideapme.ca/idea/" target="blank" class="centered">
+                    <img src="{{ STATIC_URL }}images/logo_IDEA.png" class="centered" />
+                </a>
+                <h4>Product manager assistant</h4>
+                <p><em>Summer of 2007</em></p>
+                <ul>
+                    <li>Product development</li>
+                    <li>High technology</li>
+                    <li>Patent research</li>
+                    <li>Material research</li>
+                    <li>3D modelling</li>
+                </ul>
+            </div><!-- end span-->
+        </div><!-- end row-->
+    </div> <!--end div container-->
+    <div class="container-headers">
+        <div class="container">
+            <h2>Skills</h2>
+        </div>
+    </div>
+    <div class="container opacity" id="skills">
+        <div class="row-fluid">
+            <div>
+                <a class="btn btn-large disabled tag-cloud">Python</a>
+                <a class="btn btn-large disabled tag-cloud">Django</a>
+                <a class="btn btn-large disabled tag-cloud">Pyramid</a>
+                <a class="btn btn-large disabled tag-cloud">SQLAlchely</a>
+                <a class="btn btn-large disabled tag-cloud">Java</a>
+                <a class="btn btn-large disabled tag-cloud">MySql</a>
+                <a class="btn btn-large disabled tag-cloud">PostgreSQL</a>
+                <a class="btn btn-large disabled tag-cloud">Redis</a>
+                <a class="btn btn-large disabled tag-cloud">Memchached</a>
+                <a class="btn btn-large disabled tag-cloud">Backbone.js</a>
+                <a class="btn btn-large disabled tag-cloud">JQuery</a>
+                <a class="btn btn-large disabled tag-cloud">CoffeeScript</a>
+                <a class="btn btn-large disabled tag-cloud">HTML</a>
+                <a class="btn btn-large disabled tag-cloud">CSS</a>
+                <a class="btn btn-large disabled tag-cloud">Automated Testing</a>
+                <a class="btn btn-large disabled tag-cloud">Photoshop</a>
+                <a class="btn btn-large disabled tag-cloud">Scrum</a>
+                <a class="btn btn-large disabled tag-cloud">PMI</a>
+                <a class="btn btn-large disabled tag-cloud">AWS</a>
+            </div>
+        </div><!-- end row-->
+    </div> <!--end div container-->
+
+    <div class="container-headers">
+        <div class="container">
+            <h2>Social</h2>
+        </div>
+    </div>
+
+    <div class="container opacity">
+        <div class="row-fluid">
+            <div class="span2">
+                <a href="http://www.linkedin.com/in/andreebrazeau/en" target="blank" class="roll_hover">
+                    <div class="roll_hover" id = "linkedin"> </div>
+                </a>
+            </div> <!-- end span-->
+            <div class="span2">
+                <a href="https://www.facebook.com/ddbraz" target="blank"class="roll_hover" >
+                    <div class="roll_hover" id = "facebook"> </div>
+                </a>
+            </div> <!-- end span-->
+            <div class="span2">
+                <a href="http://twitter.com/#!/ddbraz" target="blank"class="roll_hover">
+                    <div class="roll_hover" id = "twitter-img"> </div>
+                </a>
+            </div> <!-- end span-->
+            <div class="span2">
+                <a href="https://github.com/andreebrazeau" target="blank"class="roll_hover">
+                    <div class="roll_hover" id = "github"> </div>
+                </a>
+            </div> <!-- end span-->
+            <div class="span2">
+                <a href="mailto:andreebrazeau@gmail.com" target="blank" class="roll_hover">
+                    <div class="roll_hover" id = "email"> </div>
+                </a>
+            </div> <!-- end span-->
+            <div class="span2">
+                <a href="http://instagram.com/ddbraz" target="blank" class="roll_hover">
+                    <div class="roll_hover" id = "gramfeed"> </div>
+                </a>
+            </div> <!-- end span-->
+        </div><!-- end row-fluid-->
+
+    </div> <!--end div container-->
+</section>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+{% endblock %}

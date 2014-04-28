@@ -1,0 +1,66 @@
+/*Color*/
+/*
+Bright Green 79A725
+Dirt Green 485433
+Dark Green 203200
+Light Green DCFF9C
+background F8FFEB*/
+
+h1,h2,h3,h4,h5,h6 {
+    color: #485433;
+    font-family: 'Quicksand', 'sans-serif';
+}
+
+p {
+    color: #79A725;
+}
+body {
+    padding-top: 30px;
+    background-color: #F8FFEB;
+}
+
+ul {
+    padding-left: 0px;
+}
+
+li {
+    list-style-type: None;
+}
+
+a {
+    color: #79A725;
+}
+
+a:hover {
+    color: #485433;
+}
+
+#my-pic {
+    background-image: url('../images/me.jpg');
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    display: block;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid;
+    opacity: .8;
+    /*-webkit-transition: all 500ms ease-in;*/
+    /*-moz-transition: all 500ms ease-in;*/
+    /*-o-transition: all 500ms ease-in;*/
+    /*margin-left: 1px;*/
+    /*position: fixed;*/
+}
+
+h1.page-title {
+    font-size: 60px;
+}
+
+#footer {
+    background-color: #DCFF9C;
+}
+
+#footer p {
+    color: #203200;
+}
+

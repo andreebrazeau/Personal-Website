@@ -2,8 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.conf import settings
 
 # Uncomment the next two lines to enable the admin:
-from django.contrib import admin
-admin.autodiscover()
+# admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
@@ -14,11 +13,9 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    url(r'^blog/$','blog.views.blog_list'),
-    url(r'^blog/(?P<blog_id>\d+)/$', 'blog.views.blog'),
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^$','blog.views.index', name = 'index'),
-    url(r'^portfolio/$','blog.views.portfolio', name = 'index'),
+    url(r'^$', 'blog.views.index', name='index'),
+    url(r'^portfolio$', name='portfolio', {'template': 'portfolio.html'}),
+    url(r'^about', name = 'about'),
 
 )
 
